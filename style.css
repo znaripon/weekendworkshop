@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f4ed;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+header {
+    background: #59634f;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 3rem;
+}
+
+.tagline {
+    margin-top: 20px;
+    font-size: 1.3rem;
+}
+
+.tagline2 {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero-text {
+    font-size: 1.2rem;
+    margin: 30px 0;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    background: white;
+    color: #59634f;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.checklist {
+    padding: 50px 0;
+}
+
+.checklist ul {
+    list-style: none;
+    padding: 0;
+    columns: 2;
+}
+
+.checklist li {
+    margin-bottom: 12px;
+}
+
+.about {
+    background: white;
+    padding: 60px 0;
+}
+
+footer {
+    background: #59634f;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+@media (max-width: 768px) {
+    .checklist ul {
+        columns: 1;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+}
