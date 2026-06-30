@@ -1,86 +1,255 @@
-body {
+/* RESET */
+
+* {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f7f4ed;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans 3', sans-serif;
     color: #333;
+    background: #f8f6f1;
     line-height: 1.6;
 }
 
-.container {
-    width: 90%;
-    max-width: 1000px;
-    margin: auto;
-}
+/* HEADER */
 
 header {
-    background: #59634f;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    background: rgb(79, 95, 62);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 8%;
+    z-index: 1000;
+}
+
+.logo {
     color: white;
-    text-align: center;
-    padding: 80px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
 }
 
-h1 {
-    margin: 0;
-    font-size: 3rem;
-}
-
-.tagline {
-    margin-top: 20px;
-    font-size: 1.3rem;
-}
-
-.tagline2 {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
-
-.hero-text {
-    font-size: 1.2rem;
-    margin: 30px 0;
-}
-
-.button {
-    display: inline-block;
-    padding: 12px 25px;
-    background: white;
-    color: #59634f;
+nav a {
+    color: white;
     text-decoration: none;
-    border-radius: 4px;
-    font-weight: bold;
+    margin-left: 28px;
+    font-weight: 600;
+    transition: 0.25s;
 }
 
-.checklist {
-    padding: 50px 0;
+nav a:hover {
+    color: #d4b26a;
 }
 
-.checklist ul {
-    list-style: none;
-    padding: 0;
-    columns: 2;
-}
+/* HERO */
 
-.checklist li {
-    margin-bottom: 12px;
-}
+.hero {
+    min-height: 70vh;
 
-.about {
-    background: white;
-    padding: 60px 0;
-}
+    background:
+        linear-gradient(rgba(0,0,0,.30), rgba(0,0,0,.45)),
+        url("images/CylHead.jpeg");
 
-footer {
-    background: #59634f;
-    color: white;
+    background-size: cover;
+    background-position: center 10%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     text-align: center;
+    color: white;
+
     padding: 30px;
 }
 
-@media (max-width: 768px) {
-    .checklist ul {
-        columns: 1;
+.hero-content {
+    max-width: 700px;
+    width: 100%;
+    transform: translateY(60px);
+}
+
+.hero-title {
+    margin-bottom: 18px;
+}
+
+.hero-title h1 {
+    margin: 0 0 16px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    letter-spacing: 2px;
+}
+
+.hero-subtitle {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.hero-service {
+    margin-bottom: 18px;
+}
+
+.hero-service h2 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.hero-message {
+    margin-bottom: 20px;
+}
+
+.hero-message p {
+    margin: 0;
+    font-size: 1.2rem;
+    line-height: 1.7;
+}
+
+/* CALL TO ACTION BUTTON */
+
+.cta-button {
+    display: inline-block;
+
+    padding: 15px 38px;
+
+    background: #7b8468;
+    color: white;
+
+    text-decoration: none;
+    border-radius: 40px;
+
+    font-weight: 600;
+    letter-spacing: .5px;
+
+    transition: 0.25s;
+}
+
+.cta-button:hover {
+    background: #59624c;
+    transform: translateY(-2px);
+}
+
+/* FEATURES */
+
+.features {
+    padding: 90px 8%;
+    background: #f8f6f1;
+    text-align: center;
+}
+
+.features h2 {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 50px;
+    color: #39432f;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.feature {
+    background: white;
+    padding: 40px;
+
+    border-top: 5px solid #7b8468;
+    border-radius: 8px;
+
+    box-shadow: 0 8px 24px rgba(0,0,0,.06);
+
+    text-align: left;
+    transition: 0.25s;
+}
+
+.feature:hover {
+    transform: translateY(-6px);
+}
+
+.feature h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #404a38;
+    margin-bottom: 18px;
+}
+
+.feature p {
+    line-height: 1.8;
+    color: #555;
+}
+
+/* ABOUT */
+
+.about {
+    background: white;
+    padding: 90px 10%;
+}
+
+.about-text {
+    max-width: 850px;
+    margin: auto;
+}
+
+.about h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #39432f;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.about p {
+    margin-bottom: 22px;
+    font-size: 1.15rem;
+    line-height: 1.9;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+    header {
+        flex-direction: column;
+        padding: 15px;
     }
 
-    h1 {
-        font-size: 2.2rem;
+    nav {
+        margin-top: 15px;
+    }
+
+    nav a {
+        margin: 0 10px;
+    }
+
+    .hero {
+        min-height: 75vh;
+    }
+
+    .hero-content {
+        transform: translateY(40px);
+    }
+
+    .hero-title h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .hero-service h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero-message p {
+        font-size: 1.05rem;
     }
 }
