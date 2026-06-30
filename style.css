@@ -27,14 +27,20 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    padding: 18px 8%;
+    height: 82px;
+    padding: 0 8%;
     z-index: 1000;
 }
 
 .logo {
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    height: 50px;
+    width: auto;
+    display: block;
 }
 
 nav a {
