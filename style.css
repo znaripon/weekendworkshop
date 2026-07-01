@@ -374,3 +374,17 @@ nav a:hover {
     line-height: 1.7;
     color: #555;
 }
+.ww-tip {
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 2px solid #d4b26a;
+}
+.ww-tip p {
+    font-style: italic;
+}
+.ww-tip-title {
+    color: #39432f;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 8px;
+}
